@@ -4,21 +4,22 @@ dimes = 10
 nickles = 5
 pennies = 1
 
-  if change_due >= dimes
-    coins["dimes"] = 1
+  while change_due >= dimes
+    coins["dimes"] = coins["dimes"] + 1
     change_due = change_due - dimes
-    
   end
   
-  if change_due >= nickles
-    coins["nickles"] = 1
+  while change_due >= nickles
+    coins["nickles"] = coins["nickles"] + 1
     change_due = change_due - nickles
   end
   
-  if change_due >= pennies
-     coins["pennies"] = change_due
+  while change_due >= pennies
+     coins["pennies"] = coins["pennies"] + 1
+     change_due = change_due - pennies
   end
     
   coins
+  
 
 end
