@@ -1,9 +1,15 @@
 def change(change_due)
   coins = {"quarters" => 0, "dimes" => 0, "nickles" => 0, "pennies" => 0}
+quarters = 25
 dimes = 10
 nickles = 5
 pennies = 1
 
+  while change_due >= quarters
+    coins["quarters"] = coins["quarters"] + 1
+    change_due = change_due - quarters
+  end
+  
   while change_due >= dimes
     coins["dimes"] = coins["dimes"] + 1
     change_due = change_due - dimes
