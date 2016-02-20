@@ -3,9 +3,9 @@ def change(change_due)
 
   if change_due >= 5
     coins["nickles"] = 1
-  else
+    coins["pennies"] = change_due - 5
+  else 
     coins["pennies"] = change_due
-  
   end
   
   coins
