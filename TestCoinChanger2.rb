@@ -21,5 +21,8 @@ class TestCoinChanger2 < MiniTest::Test
     end
     def test_change_due_of_11
         assert_equal({"quarters" => 0, "dimes" => 1, "nickles" => 0, "pennies" => 1}, change(11))
+    end
+    def test_change_due_of_16
+        assert_equal({"quarters" => 0, "dimes" => 1, "nickles" => 1, "pennies" => 1}, change(16))
     end 
 end
